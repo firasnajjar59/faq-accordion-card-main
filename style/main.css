@@ -1,0 +1,104 @@
+* {
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.container .wrapper .rightWrappar .right, .container .wrapper .rightWrappar, .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-size: 12px;
+  background-image: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+}
+
+.container {
+  min-height: 100vh;
+  margin: auto;
+  max-width: 1440px;
+}
+.container .wrapper {
+  min-height: 50vh;
+  width: 80%;
+  background-color: white;
+  border-radius: 3em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container .wrapper .left {
+  width: 100%;
+  position: relative;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-position: 130% 50%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.container .wrapper .left .overhidden {
+  width: 120%;
+  position: relative;
+  left: 0%;
+  overflow: hidden;
+}
+.container .wrapper .left .overhidden :first-child {
+  position: absolute;
+  left: -10%;
+  top: 10%;
+  z-index: 100;
+  overflow: hidden;
+}
+.container .wrapper .left :last-child {
+  position: absolute;
+  z-index: 150;
+  left: -18%;
+  top: 35%;
+}
+.container .wrapper .rightWrappar {
+  position: relative;
+  z-index: 200;
+}
+.container .wrapper .rightWrappar .right {
+  background-color: white;
+  width: 85%;
+  flex-direction: column;
+  gap: 2em;
+}
+.container .wrapper .rightWrappar .right h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.container .wrapper .rightWrappar .right div {
+  width: 100%;
+}
+.container .wrapper .rightWrappar .right div hr {
+  border-top: 1px solid rgba(128, 128, 128, 0.398);
+  border-radius: 1px;
+}
+.container .wrapper .rightWrappar .right div :first-child {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+}
+.container .wrapper .rightWrappar .right div :first-child:after {
+  content: url(../images/icon-arrow-down.svg);
+}
+.container .wrapper .rightWrappar .right div :nth-child(2) {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+.activeH1 {
+  font-weight: 700;
+}
+.activeH1:after {
+  transform: scale(-1);
+}/*# sourceMappingURL=main.css.map */

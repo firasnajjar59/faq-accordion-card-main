@@ -1,0 +1,113 @@
+* {
+  font-family: $primary-font;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+%flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  font-size: 12px;
+  background-image: linear-gradient($SoftSiolet, $SofBlue);
+}
+
+.container {
+  min-height: 100vh;
+  margin: auto;
+  max-width: 1440px;
+
+  @extend %flex;
+  .wrapper {
+    min-height: 50vh;
+      width: 80%;
+      background-color: white;
+      border-radius: 3em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .left {
+        // padding: 3em 5em;
+        width: 100%;
+        position: relative;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-position: 130% 50%;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: 1fr;
+        .overhidden {
+            width: 120%;
+            position: relative;
+            left: 0%;
+            overflow: hidden;
+            :first-child {
+                // max-width: 100%;
+                position: absolute;
+                left: -10%;
+                top: 10%;
+                z-index: 100;
+                overflow: hidden;
+            }
+        }
+        :last-child {
+            position: absolute;
+            z-index: 150;
+            left: -18%;
+            top: 35%;
+        }
+    }
+    .rightWrappar{
+        position: relative;
+        z-index: 200;
+        @extend %flex;
+        .right {
+            background-color: white;
+            
+            width: 85%;
+            @extend %flex;
+        flex-direction: column;
+        gap: 2em;
+       
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+        }
+        div {
+        width: 100%;
+        hr{
+            border-top: 1px solid rgba(128, 128, 128, 0.398);  
+            border-radius: 1px;
+          }
+        
+          
+        :first-child {
+          font-size: 1.5em;
+       
+          display: flex;
+          justify-content: space-between;
+          
+          padding-bottom: 0.5em;
+          
+          &:after {
+            content: url(../images/icon-arrow-down.svg);
+            // transform: scale(-1);
+          }
+        }
+        :nth-child(2) {
+          font-size: 1.3em;
+            margin-bottom: 0.5em;
+        }
+      }
+    }}
+  }
+}
+.hidden{
+    display: none;
+}
+.activeH1{
+font-weight: 700;
+&:after {
+    transform: scale(-1);
+  }
+}
